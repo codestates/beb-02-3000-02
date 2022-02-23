@@ -13,6 +13,7 @@ function cancelLike(postId, userId){
 }
 
 module.exports = {
-    insertUser,
-    getUserInfo
+    insertLikeRecord,
+    getLikeCnt,
+    cancelLike
 }
