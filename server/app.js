@@ -1,22 +1,16 @@
 const express = require("express");
-const dotenv = require("dotenv");
-const cors = require("cors");
-const indexRouter = require("./routes/index.js");
-
-dotenv.config();
+const config = require("./config/config.js");
+const loaders = require("./loaders/index.js");
 
 const app = express();
-const {PORT} = process.env;
-const port = PORT || 4000;
-const corsOption = {
-    orgin: `http://localhost:${port}`,
-    credentials: true
-}
+const port = config.port || 4000;
 
-app.use(express.json());
-app.use(cors(corsOption));
-app.use('/', indexRouter);
+loaders(app);
 
-app.listen(3000, function(){
+const startServer =  app.listen(port, () => {
     console.log(`Express server starting on port ${port}`);
+}).on('error', err => {
+    process.exit(1);
 });
+
+module.exports = {startServer};
