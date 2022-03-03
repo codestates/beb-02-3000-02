@@ -1,0 +1,61 @@
+body {
+  background-color: #fbfbfb;
+}
+
+input {
+  outline-style: none;
+  border: none;
+  border-bottom: solid;
+  border-width: 0.3px;
+  border-color: #828282;
+}
+
+.name {
+  margin-top: 10px;
+}
+
+.App {
+  background-color: #fbfbfb;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.erc721list {
+  position: relative;
+}
+
+.erc721token {
+  background-color: white;
+  width: 400px;
+  height: 550px;
+  border-style: solid;
+  border-width: 0.3px;
+  border-color: #c4c4c4;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.tokenTransfer {
+  bottom: 0 auto;
+}
+
+img {
+  margin-top: 30px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.btn--secondary {
+  border-style: none;
+  background-color: #fbfbfb;
+  font-size: 15px;
+  color: #4f4f4f;
+}
+
+.userInfo {
+  color: #828282;
+  margin-top: 10px;
+}
